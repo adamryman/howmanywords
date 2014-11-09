@@ -2,6 +2,7 @@ var allWords = {the: true, be: true, and: true, of: true, a: true, in: true, to:
 
 var words = {};
 var count = 0;
+var wordList = document.getElementById('words');
 //comments
 function enterInput(){
    if(event.keyCode == 13 && document.getElementById('input').value != "") {
@@ -10,13 +11,14 @@ function enterInput(){
          //comments
          document.getElementById('input').value = "";
          alert("YOU FAIL");
-         var wordList = document.getElementById('words');
          Object.keys(words).forEach(function(word) {
             wordList.innerHTML += '<li>' + word + '</li>';
          })
          words = {};
+         count = 0;
       } else {
          //comments
+         wordList.innerHTML = "";
          words[input] = true;
          count++;
          document.getElementById('score').innerHTML = count;
