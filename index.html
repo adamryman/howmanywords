@@ -1,9 +1,13 @@
 <html>
-<head><title>HOW MANY WORDS DO YOU KNOW? (OF THE TOP 1000 WORDS)</title></head>
-
+<head><title>HOW MANY WORDS DO YOU KNOW? (OF THE TOP 1000 WORDS)</title><link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
+<style>.right-inner-addon {
+    position: relative;
+}</style>
 <body>
    <h1>HOW MANY WORDS DO YOU KNOW? (OF THE TOP 1000 WORDS)</h1>
-   <input id="input" onkeyup="enterInput()" autofocus/>
+      <div class="right-inner-addon ">
+      <input id="input" onkeyup="enterInput()"  class="input-group input-group-lg" autofocus/>
+   </div>
    <h4>Score</h4>
    <div id="score"></div>
    <ul id="words"></ul>

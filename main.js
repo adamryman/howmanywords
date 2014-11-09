@@ -7,6 +7,10 @@ var wordList = document.getElementById('words');
 function enterInput(){
    if(event.keyCode == 13 && document.getElementById('input').value != "") {
       var input = document.getElementById('input').value;
+
+      input = input.replace(/\s+/g, '');
+      input = input.toLowerCase();
+
       if(words[input] || !allWords[input]){
          //comments
          document.getElementById('input').value = "";
